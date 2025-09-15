@@ -1,7 +1,7 @@
   class Quickdeploy < Formula
     desc "One command deployment tool for your web applications"
     homepage "https://quickdeploy.dev"
-    version "0.1.0"
+    version "0.2.17"
     license "MIT"
 
     on_macos do
