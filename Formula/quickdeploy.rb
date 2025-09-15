@@ -7,20 +7,20 @@
     on_macos do
       if Hardware::CPU.arm?
         url "https://quickdeploy.dev/api/download/darwin-arm64"
-        sha256 "initial_sha_here" # darwin-arm64
+        sha256 "" # darwin-arm64
       else
         url "https://quickdeploy.dev/api/download/darwin-amd64"
-        sha256 "initial_sha_here" # darwin-amd64
+        sha256 "" # darwin-amd64
       end
     end
 
     on_linux do
       if Hardware::CPU.arm?
         url "https://quickdeploy.dev/api/download/linux-arm64"
-        sha256 "initial_sha_here" # linux-arm64
+        sha256 "" # linux-arm64
       else
         url "https://quickdeploy.dev/api/download/linux-amd64"
-        sha256 "initial_sha_here" # linux-amd64
+        sha256 "" # linux-amd64
       end
     end
 
