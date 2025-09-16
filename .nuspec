@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>quickdeploy</id>
+    <version>0.3.0</version>
+    <title>QuickDeploy</title>
+    <authors>Maximilian Kürschner</authors>
+    <owners>Maximilian Kürschner</owners>
+    <projectUrl>https://quickdeploy.dev</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Deploy your web app to a VPS in minutes.</description>
+    <tags>deployment rust cli</tags>
+  </metadata>
+</package>
