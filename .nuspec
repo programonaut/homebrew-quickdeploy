@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>quickdeploy</id>
-    <version>0.3.0</version>
+    <version>0.3.1</version>
     <title>QuickDeploy</title>
     <authors>Maximilian Kürschner</authors>
     <owners>Maximilian Kürschner</owners>
