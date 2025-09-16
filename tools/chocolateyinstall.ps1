@@ -3,9 +3,9 @@ $ErrorActionPreference = 'Stop'
 $packageName = 'quickdeploy'
 $toolsDir   = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
-$version    = '0.3.1'
+$version    = '0.3.2'
 # $osArch     = if ([Environment]::Is64BitOperatingSystem) { 'amd64' } else { 'x86' }
-$osArch     = '0.3.1'
+$osArch     = '0.3.2'
 
 $binaryUrl  = "https://quickdeploy.dev/api/download/windows-$osArch"
 $exePath    = Join-Path $toolsDir 'quickdeploy.exe'
@@ -15,4 +15,4 @@ Get-ChocolateyWebFile `
     -FileFullPath $exePath `
     -Url $binaryUrl `
     -ChecksumType 'sha256' `
-    -Checksum 'sha256:e665f6597a30fe8c5a6f6d1b6c64ccca0482c84a25e39d55286577271cf4ce46'
+    -Checksum 'sha256:bd8451be7456e584735d44d2951784e8d194e8984813b42bd9e65028d36fa699'
