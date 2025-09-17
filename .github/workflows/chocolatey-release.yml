@@ -2,35 +2,27 @@ name: Manual Chocolatey Release
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
   release:
     runs-on: windows-latest
-    
+
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-    
-    - name: Extract version from nuspec
-      run: |
-        $nuspecContent = Get-Content quickdeploy.nuspec -Raw
-        $version = [regex]::Match($nuspecContent, '<version>([^<]+)</version>').Groups[1].Value
-        Write-Output "Extracted version: $version"
-        echo "VERSION=$version" >> $env:GITHUB_ENV
-      shell: powershell
-    
-    - name: Commit and push changes
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add tools/chocolateyinstall.ps1
-        git commit -m "Update chocolatey package to version ${{ env.VERSION }}" || echo "No changes to commit"
-        git push
-    
-    - name: Package and publish to Chocolatey
-      run: |
-        choco pack
-        choco push quickdeploy.${{ env.VERSION }}.nupkg --source https://push.chocolatey.org/ --api-key ${{ secrets.CHOCOLATEY_API_KEY }}
-      shell: cmd
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract version from nuspec
+        run: |
+          $nuspecContent = Get-Content quickdeploy.nuspec -Raw
+          $version = [regex]::Match($nuspecContent, '<version>([^<]+)</version>').Groups[1].Value
+          Write-Output "Extracted version: $version"
+          echo "VERSION=$version" >> $env:GITHUB_ENV
+        shell: powershell
+
+      - name: Package and publish to Chocolatey
+        run: |
+          choco pack
+          choco push quickdeploy.${{ env.VERSION }}.nupkg --source https://push.chocolatey.org/ --api-key ${{ secrets.CHOCOLATEY_API_KEY }}
+        shell: powershell
