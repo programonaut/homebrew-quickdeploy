@@ -23,9 +23,9 @@ jobs:
 
       - name: Package and publish to Chocolatey
         run: |
-          rm -rf .git
-          rm -rf .github
-          rm -rf Formula
+          Remove-Item -Recurse -Force .git
+          Remove-Item -Recurse -Force .github
+          Remove-Item -Recurse -Force Formula
           choco pack
           choco push quickdeploy.${{ env.VERSION }}.nupkg --source https://push.chocolatey.org/ --api-key ${{ secrets.CHOCOLATEY_API_KEY }}
         shell: powershell
