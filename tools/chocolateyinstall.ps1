@@ -15,4 +15,4 @@ Get-ChocolateyWebFile `
     -FileFullPath $exePath `
     -Url $binaryUrl `
     -ChecksumType 'sha256' `
-    -Checksum 'sha256:7ba05a459f027f6a399bfc4ddfc4ba25afe1e4fb5ebbca307dd3560c2d5211ea'
+    -Checksum 'sha256:236131b82840393628b1a5db79f0f8304eeb8573d8ee23ad507a447aef78f9bf'
