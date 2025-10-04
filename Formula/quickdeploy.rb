@@ -1,26 +1,26 @@
   class Quickdeploy < Formula
     desc "One command deployment tool for your web applications"
     homepage "https://quickdeploy.dev"
-    version "0.4.0"
+    version "0.4.1"
     license "MIT"
 
     on_macos do
       if Hardware::CPU.arm?
         url "https://quickdeploy.dev/api/download/darwin-arm64"
-        sha256 "e1cc6d2b711831e683d554b00bc491c58b123d1bc7402e91af10139c470c1775" # darwin-arm64
+        sha256 "84a41af015abb8b24fea4612f1c2a54c7f4e6fa873682558dbd3971777371c01" # darwin-arm64
       else
         url "https://quickdeploy.dev/api/download/darwin-amd64"
-        sha256 "d9a500ffa54d93202a568d72feca0d4397b8e62e462bf2f97e0d029f367f4290" # darwin-amd64
+        sha256 "eccedbf9e2895b9019e53512fab1885274f8ff8a7ce32b06d7e427c2a228e323" # darwin-amd64
       end
     end
 
     on_linux do
       if Hardware::CPU.arm?
         url "https://quickdeploy.dev/api/download/linux-arm64"
-        sha256 "347cdc309f75d720f72c5f3d57bbc109bedd86cfd62893d42514dc2b2562c167" # linux-arm64
+        sha256 "8156d415c17ec436c76c50eb61ad248f6bc8047cab0bceac6d4d1d6d6fed6bbb" # linux-arm64
       else
         url "https://quickdeploy.dev/api/download/linux-amd64"
-        sha256 "b4bedd464ff094eeb8f5bfbd2f01c1fbec6b8ef2f884c36f5875dc8c0efe88b8" # linux-amd64
+        sha256 "4f17526f6e90ed36a12c2e25a3259d9e3f672fd8dc49f1b8038cecb6b010c325" # linux-amd64
       end
     end
 

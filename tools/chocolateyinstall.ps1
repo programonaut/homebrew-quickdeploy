@@ -3,7 +3,7 @@ $ErrorActionPreference = 'Stop'
 $packageName = 'quickdeploy'
 $toolsDir   = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
-$version    = '0.4.0'
+$version    = '0.4.1'
 # $osArch     = if ([Environment]::Is64BitOperatingSystem) { 'amd64' } else { 'x86' }
 $osArch     = 'amd64'
 
@@ -15,4 +15,4 @@ Get-ChocolateyWebFile `
     -FileFullPath $exePath `
     -Url $binaryUrl `
     -ChecksumType 'sha256' `
-    -Checksum 'sha256:f6be06ce6be4968ad2de07432439f4bc2b8ef93142100374bb1efc2796e3be8e'
+    -Checksum 'sha256:a963826f60f1410b0adbc4d6ce6de39df41ace840e75af023bd8fc785e389d1c'
